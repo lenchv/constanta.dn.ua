@@ -27,29 +27,31 @@ if (isset($_POST["submit"])) {
 }
 ?>
 	<div class="header">
-		<div class="wrapper">
-			<div class="company-logo">
-				<div class="logo"></div>
-				<div class="name">Константа</div>
+		<div class="company-logo">
+			<div class="contacts">
+				<div class="sign-request">Звоните нам Пн-Пт с 9.00 до 18.00:</div>
+				<div class="phone-logo"></div>
+				<div class="phone"><b>+38 (062) 200 10 70</b></div>
+				<div class="phone"><b>+38 (050) 754 77 66</b></div>
+				<!--div class="phone"><b>+38 (093) 708 00 13</b></div-->
 			</div>
+			<img width="300" src="images/logo.jpg" alt="" class="logo">
+			<!--div class="logo"></div>
+			<div class="name">Константа</div-->
+		</div>
+		<div class="wrapper">
 			<div class="title">
 				<h3>сдача отчетности в электронном виде</h3>
 				<h5>Без походов! Без очередей! В удобное для Вас время!</h5>
 				<div class="line"></div>
 				<form action="index.php" class="request" method="POST">
-					<div class="sign-request">Звоните нам Пн-Пт с 9.00 до 18.00:</div>
-					<div class="contacts">
-						<div class="phone-logo"></div>
-						<div class="phone"><b>+38 (062) 200 10 70</b></div>
-						<div class="phone"><b>+38 (050) 754 77 66</b></div>
-						<div class="phone"><b>+38 (093) 708 00 13</b></div>
-					</div>
-					<div class="sign-request">или оставьте Ваши контактные данные, и наши менеджеры с Вами свяжутся:</div>
+					
+					<div class="sign-request">Оставьте свои контактные данные, и наши менеджеры с Вами свяжутся:</div>
 					<div class="form-data">
 						<input type="text" placeholder="Ваше имя" name="username" required>
 						<input type="tel" placeholder="Ваш телефон" name="usertel" required>
 						<input type="email" placeholder="Ваша почта" name="usermail" required>
-						<input type="submit" name="submit" value="ОТПРАВИТЬ">
+						<input type="submit" name="submit" value="ОТПРАВИТЬ КОНТАКТЫ">
 					</div>
 				</form>
 			</div>

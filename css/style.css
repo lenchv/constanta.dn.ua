@@ -19,6 +19,8 @@
     color: rgb(255, 244, 242);
 	min-width: 510px;
 }
+
+
 .header .wrapper {
 	width: 100%;
 	height: 100%;
@@ -27,15 +29,51 @@
 }
 
 .header .company-logo {
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	height: auto;
 	clear: both;
 	margin: 0 auto;
-	padding: 25px 0;
+	padding: 10px 0;
+	background-color: #fff;
+	opacity: .7;
+}
+.header .company-logo .logo {
+	
+}
+.header .sign-request {
+	color: #000;
+	text-align: left;
+	clear: both;
+	margin-bottom: 5px;
+	
 }
 
-.header .company-logo .logo{
+.header .contacts {
+	position: relative;
+	color: #000;
+	height: 24px;
+	line-height: 24px;
+	margin-bottom: 40px;
+	float: right;
+}
+.header .contacts .phone-logo {
+	display: block;
+	background-image: url(../images/tel-ico.svg);
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	float: left;
+}
+.header .contacts .worktime {
+}
+.header .contacts .phone {
+	float: left;
+	margin-left: 10px;
+	margin-right: 20px;
+	position: relative;
+}
+/*.header .company-logo .logo{
 	background-image: url(../images/company-logo.gif);
 	background-repeat: no-repeat;
 	width: 50px;
@@ -49,7 +87,7 @@
 	transition: transform .5s ease-out;
 	/*position: relative;
 	top: 17px;*/
-}
+/*}
 .header .company-logo .name{
 	display: inline-block;
 	line-height: 40px;
@@ -66,7 +104,7 @@
 .header .company-logo .logo:hover {
 	transform: scale(1.2);
 	cursor: pointer;
-}
+}*/
 
 .header .title {
 	text-align: center;
