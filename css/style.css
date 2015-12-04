@@ -25,6 +25,7 @@
 	background-color: rgba(0, 0, 0, .5);
     padding: 30px 0;
 }
+
 .header .company-logo {
 	text-align: center;
 	width: 100%;
@@ -75,12 +76,13 @@
 .header .title h3 {
 	text-transform: uppercase;
     font-weight: 700;
-    font-size: 180%;
+    font-size: 200%;
     margin: 10px 0;
 }
 
 .header .title h5 {
 	margin: 15px 0;
+    font-size: 140%;
 }
 
 .header .title .line {
@@ -94,17 +96,59 @@
 .header form.request {
 	width: 65%;
 	margin: 20px auto;
-	padding: 50px;
+	padding: 30px;
 	background-color: #F0C013;
-	text-align: center;
+	text-align: left;
 }
 
 .header form.request .sign-request {
 	color: #000;
+	text-align: left;
+	clear: both;
+	margin-bottom: 5px;
+
 }
 
+.header form.request .contacts {
+	position: relative;
+	color: #000;
+	height: 24px;
+	line-height: 24px;
+	margin-bottom: 40px;
+}
+.header form.request .contacts .phone-logo {
+	display: block;
+	background-image: url(../images/tel-ico.svg);
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	float: left;
+}
+.header form.request .contacts .worktime {
+}
+.header form.request .contacts .phone {
+	float: left;
+	margin-left: 10px;
+	margin-right: 20px;
+	position: relative;
+}
+
+/*.header form.request .contacts .phone:not(:last-child):after {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #000;
+	margin-left: 10px;
+
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+}*/
+
 .header form.request .form-data {
-	margin: 30px 0 10px 0;
+	margin: 10px 0 20px 0;
 }
 
 .header form.request input[type='text'],
@@ -144,7 +188,8 @@
 
 /*********************************************/
 .content {
-	margin: 50px 10px;
+	padding: 50px 10px;
+	background-color: #fff;
 }
 
 
@@ -169,21 +214,23 @@
 	margin: auto;
 }
 
-.content table.releases {
-	margin: auto;
-	border-collapse: collapse;
-	width: 70%;
-
-}
 .content .h2 {
 	font-size: 2em;
 	color: #333;
 	text-align: center;
 	margin: .5em 0;
 }
+
+.content table.releases {
+	margin: auto;
+	border-collapse: collapse;
+	width: 70%;
+}
+
 .content table.releases th {
 	height: 50px;
 	font-size: 1.5em;
+	background-color: #B7B6B1;
 }
 
 .content table.releases td {
@@ -203,6 +250,15 @@
 .content table.releases td:last-child,
 .content table.releases td:first-child {
 	text-align: center;
+}
+
+.content .prices {
+	width: 70%;
+	margin: 10px auto;
+}
+
+.content .prices a {
+	color: #2196F3;
 }
 /*.content table.releases tr:not(:first-child):hover {
 	background-color: #F8EBDD;

@@ -33,11 +33,18 @@ if (isset($_POST["submit"])) {
 				<div class="name">Константа</div>
 			</div>
 			<div class="title">
-				<h3>asdasdsad</h3>
-				<h5>asdsadsa</h5>
+				<h3>сдача отчетности в электронном виде</h3>
+				<h5>Без походов! Без очередей! В удобное для Вас время!</h5>
 				<div class="line"></div>
 				<form action="index.php" class="request" method="POST">
-					<div class="sign-request">Оставьте контактыне данные, и мы с Вами свяжемся:</div>
+					<div class="sign-request">Звоните нам Пн-Пт с 9.00 до 18.00:</div>
+					<div class="contacts">
+						<div class="phone-logo"></div>
+						<div class="phone"><b>+38 (062) 200 10 70</b></div>
+						<div class="phone"><b>+38 (050) 754 77 66</b></div>
+						<div class="phone"><b>+38 (093) 708 00 13</b></div>
+					</div>
+					<div class="sign-request">или оставьте Ваши контактные данные, и наши менеджеры с Вами свяжутся:</div>
 					<div class="form-data">
 						<input type="text" placeholder="Ваше имя" name="username" required>
 						<input type="tel" placeholder="Ваш телефон" name="usertel" required>
@@ -58,31 +65,35 @@ if (isset($_POST["submit"])) {
 				<th>Номер релиза</th>
 			</tr>
 			<tr>
-				<td>28.11.2015</td>
+				<td>01.12.2015</td>
 				<td>Отчет по <b>НДФЛ / 1ДФ</b></td>
-				<td>0.0.0.0</td>
+				<td>5.0.0</td>
 			</tr>
 			<tr>
-				<td>28.11.2015</td>
+				<td>01.12.2015</td>
 				<td>Отчет по <b>ЕСВ</b></td>
-				<td>0.0.0.0</td>
+				<td>5.0.0</td>
 			</tr>
 			<tr>
-				<td>28.11.2015</td>
+				<td>01.12.2015</td>
 				<td>Декларация по <b>прибыли</b></td>
-				<td>0.0.0.0</td>
+				<td>5.0.0</td>
 			</tr>
 		</table>
+
+		<div class="prices">Цены доступны для скачивания по <a href="http://constanta.dn.ua/Constanta_prices.xlsx">ссылке</a></div>
 	</div>	
 	<div class="footer">
 		<div class="wrapper">
 			<div class="contacts">
 				<span>Наш адрес: </span>
 				<div class="address">г. Донецк, ул. Артема, 41, 2й этаж</div>
-				<a href="ymaps.html" target="_blank"><img width="320" height="240" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=bb3hTP9VUy7C9wgcKgzAPw1G9TMzZxIP&width=320&height=240&lang=ru_UA&sourceType=constructor" alt=""/>
+				<a href="ymaps.html" target="_blank">
+					<img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?sid=bb3hTP9VUy7C9wgcKgzAPw1G9TMzZxIP&width=320&height=240&lang=ru_UA&sourceType=constructor" alt=""/>
+				</a>
 			</div>
 			<div class="phones">
-				<span>Наши телефоны:</span><br /><br />
+				<span>Наши контакты:</span><br /><br />
 				<span class="phone-number">
 					+38 (062) 381 31 31<br />
 					+38 (062) 200 10 70<br />
@@ -90,6 +101,12 @@ if (isset($_POST["submit"])) {
 					+38 (050) 754 77 66
 				</span><br /><br />
 				<a href="mailto:info@constanta.dn.ua"><span>info@constanta.dn.ua</span></a>
+				<br />
+				<br />
+				<span>Режим работы:</span><br />
+				<span>Пн - Пт - 9:00 -18:00</span><br />
+				<span>Сб, Вс - выходные</span><br />
+				
 			</div>
 		</div>
 	</div>
