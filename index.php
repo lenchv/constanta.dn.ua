@@ -6,6 +6,26 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<?
+if (isset($_POST["submit"])) {
+	if (isset($_POST["usermail"]) && isset($_POST["usertel"]) && isset($_POST["username"])) {
+		$to = "Constanta <lenchvov@rambler.ru>";
+		$subject = "Клиент";
+		$message = "Клиент ".$_POST["username"]."\r\nEmail: ".$_POST["usermail"]."\r\nТелефон: ".$_POST["usertel"]."\r\n";
+		$headers = 'From: webmaster@smart1c.net'."\r\n".
+					'Reply-To: webmaster@smart1c.net'."\r\n".
+					'X-Mailer: PHP/'.phpversion();
+		$message = wordwrap($message, 70, "\r\n");
+		if (mail($to,$subject,$message, $headers)) {
+			header("Location: http://".$_SERVER["SERVER_NAME"]."/?ver=OK");
+		} else {
+			/*echo "Заявка не отправилась";*/
+		}
+	} else {
+			/*echo "Не все данные заполнены";*/	
+	}
+}
+?>
 	<div class="header">
 		<div class="wrapper">
 			<div class="company-logo">
@@ -16,13 +36,13 @@
 				<h3>asdasdsad</h3>
 				<h5>asdsadsa</h5>
 				<div class="line"></div>
-				<form action="" class="request">
+				<form action="index.php" class="request" method="POST">
 					<div class="sign-request">Оставьте контактыне данные, и мы с Вами свяжемся:</div>
 					<div class="form-data">
-						<input type="text" placeholder="Ваше имя">
-						<input type="tel" placeholder="Ваш телефон">
-						<input type="email" placeholder="Ваша почта" required>
-						<input type="submit" value="ОТПРАВИТЬ">
+						<input type="text" placeholder="Ваше имя" name="username" required>
+						<input type="tel" placeholder="Ваш телефон" name="usertel" required>
+						<input type="email" placeholder="Ваша почта" name="usermail" required>
+						<input type="submit" name="submit" value="ОТПРАВИТЬ">
 					</div>
 				</form>
 			</div>
