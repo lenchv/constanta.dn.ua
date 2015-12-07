@@ -7,23 +7,50 @@
 </head>
 <body>
 <?
+require_once('PHPClasses/TEmail.php');
+function output_err($err) {
+
+}
 if (isset($_POST["submit"])) {
-	if (isset($_POST["usermail"]) && isset($_POST["usertel"]) && isset($_POST["username"])) {
-		$to = "Constanta <lenchvov@rambler.ru>";
-		$subject = "Клиент";
-		$message = "Клиент ".$_POST["username"]."\r\nEmail: ".$_POST["usermail"]."\r\nТелефон: ".$_POST["usertel"]."\r\n";
-		$headers = 'From: webmaster@smart1c.net'."\r\n".
-					'Reply-To: webmaster@smart1c.net'."\r\n".
-					'X-Mailer: PHP/'.phpversion();
-		$message = wordwrap($message, 70, "\r\n");
-		if (mail($to,$subject,$message, $headers)) {
-			header("Location: http://".$_SERVER["SERVER_NAME"]."/?ver=OK");
-		} else {
-			/*echo "Заявка не отправилась";*/
-		}
-	} else {
-			/*echo "Не все данные заполнены";*/	
-	}
+
+        $_POST['usermail'] =  substr(htmlspecialchars(trim($_POST['usermail'])), 0, 50);
+        $_POST['username'] =  substr(htmlspecialchars(trim($_POST['username'])), 0, 30); 
+        $_POST['usertel'] =  substr(htmlspecialchars(trim($_POST['usertel'])), 0, 30); 
+        $error = false;
+        // если не заполнено поле "Имя" - показываем ошибку 0 
+        if (empty($_POST['username'])) 
+        {
+              $error = true; 
+             output_err(0); 
+        }  
+        // если неправильно заполнено поле email - показываем ошибку 1 
+        if(!preg_match("/[0-9a-z_]+@[0-9a-z_^\.]+\.[a-z]{2,3}/i", $_POST['usermail']))
+        {
+              $error = true; 
+             output_err(1); 
+        }  
+      // если не заполнено поле "Телефон" - показываем ошибку 2 
+        if(empty($_POST['usertel'])) 
+        {
+              $error = true; 
+             output_err(2); 
+        }  
+        if (!$error)
+        {        
+          $email=new TEmail;
+          $email->from_email='webmaster@smart1c.net';
+          $email->from_name="constanta.dn.ua";
+          $email->to_email='info@constanta.dn.ua';
+          $email->to_name='Константа 1С';
+          $email->subject='Клиент';
+          $email->body="Клиент ".$_POST["username"]."\r\nEmail: ".$_POST["usermail"]."\r\nТелефон: ".$_POST["usertel"]."\r\n";
+          if ($email->send())
+          {
+	      header("Location: http://".$_SERVER["SERVER_NAME"]."/?ver=OK");
+	  } else {
+		 output_err(3);
+	  }
+        }
 }
 ?>
 	<div class="header">
