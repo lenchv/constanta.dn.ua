@@ -1,2 +1,2 @@
-# constanta.dn.ua
-Site of constanta company
+# One page site
+Site of company
